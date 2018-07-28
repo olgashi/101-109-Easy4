@@ -7,3 +7,15 @@ def string_to_integer(str)
   number
 end
 
+def string_to_signed_integer(str)
+  if str.start_with?('-')
+    str = str[1, str.size]
+    result = -(string_to_integer(str))
+  elsif str.start_with?('+')
+    result = string_to_integer(str)
+  else
+    result = string_to_integer(str)
+  end
+
+  result
+end
